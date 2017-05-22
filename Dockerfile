@@ -27,9 +27,9 @@ WORKDIR app
 
 RUN git clone https://github.com/nickez/epmweb \
     && cd epmweb \
-    && git checkout dd6a84d
+    && git checkout dbfadbd
 
-RUN mkdir db && touch production.db
+RUN mkdir db
 
 EXPOSE 5000
 
@@ -37,4 +37,4 @@ WORKDIR epmweb
 
 RUN ./migrate
 
-CMD ["./epmweb.py", "--host", "0.0.0.0"]
+CMD ["./epmweb.py", "--debug", "--host", "0.0.0.0"]
