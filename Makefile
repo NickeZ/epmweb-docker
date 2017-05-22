@@ -1,3 +1,5 @@
+.PHONY: build run run-interactive
+
 build:
 	sudo docker build -t epmweb .
 
